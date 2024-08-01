@@ -32,7 +32,7 @@ It typically runs as a docker service in a docker compose network.
 
 The app is configured by default to run at the path `/claim`. We've done this to more easily the allow the service to run within a docker compose network served on port 80 from a single domain, and to allow the publishing the docker image on DockerHub. If you'd like to change the path take a look at [./src/pages/index.astro](./src/pages/index.astro) and [./astro.config.mjs](./astro.config.mjs)
 
-Similarly the app makes calls back to the [admin-dashboard](https://github/digitalcredentials/admin-dashboard) API assuming that the api is running on the same server, on port 80, at `/api`. Or, if the claim page is running on localhost, it will call the dashboard api at localhost:3000/api. If you'd like to change these, take a look at [./src/pages/index.astro](./src/pages/index.astro).
+Similarly the app makes calls back to the [admin-dashboard](https://github/digitalcredentials/admin-dashboard) API. This can be set with an ENV var, see .env.example for an example. It defaults to localhost:3000/api
 
 ## 🚀 Project Structure
 
